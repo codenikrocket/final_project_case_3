@@ -47,7 +47,7 @@ class DataExporter:  # Объявление класса, отвечающего
         
         # Открытие файла на запись (newline="" предотвращает появление лишних пустых строк в Windows)
         with open(filepath, "w", encoding="utf-8-sig", newline="") as file:  
-            writer = csv.DictWriter(file, fieldnames=headers)  # Создание объекта для записи словарей в CSV по заголовкам
+            writer = csv.DictWriter(file, fieldnames=headers, delimiter=";")  # Создание объекта для записи словарей в CSV по заголовкам
             writer.writeheader()  # Физическая запись первой строки с названиями колонок
             writer.writerows(data)  # Запись всех остальных строк с самими данными
             
