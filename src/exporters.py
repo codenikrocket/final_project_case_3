@@ -46,7 +46,7 @@ class DataExporter:  # Объявление класса, отвечающего
         headers = list(data[0].keys())  # Получение списка заголовков (берем ключи из первого словаря данных)
         
         # Открытие файла на запись (newline="" предотвращает появление лишних пустых строк в Windows)
-        with open(filepath, "w", encoding="utf-8", newline="") as file:  
+        with open(filepath, "w", encoding="utf-8-sig", newline="") as file:  
             writer = csv.DictWriter(file, fieldnames=headers)  # Создание объекта для записи словарей в CSV по заголовкам
             writer.writeheader()  # Физическая запись первой строки с названиями колонок
             writer.writerows(data)  # Запись всех остальных строк с самими данными
