@@ -1,0 +1,17 @@
+# Python bytecode & cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Data & Exports
+exports/*
+!exports/.gitkeep
+
+# Environments
+.venv/
+venv/
+ENV/
+
+# IDE files
+.vscode/
+.idea/
